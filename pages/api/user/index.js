@@ -1,4 +1,6 @@
-export default (req, res) => {
+import excuteQuery from '../../../src/config/database';
+
+export default async (req, res) => {
   switch (req.method) {
     case 'GET':
       const users = await excuteQuery({
